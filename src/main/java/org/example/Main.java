@@ -3,9 +3,6 @@ package org.example;
 import org.example.dao.StudentDao;
 import org.example.entity.Student;
 import org.example.hibernateUtil.HibernateSessionFactoryProvider;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 
 import java.util.List;
 import java.util.Scanner;
@@ -32,8 +29,9 @@ public class Main {
                         Student Id: %d
                         Name: %s
                         Email: %s
+                        isActive: %s
                         ----------------------
-                    """, s.getId(), s.getName(), s.getEmail());
+                    """, s.getId(), s.getName(), s.getEmail(), s.isActive());
     }
     static void printStudents(List<Student> students) {
         System.out.println("--------  All Students ------\n");

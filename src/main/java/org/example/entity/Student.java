@@ -17,6 +17,7 @@ public class Student {
     @Column(name="student_email", unique = true, nullable = false)
     private String email;
 
+    private boolean active = true;
     public Student() {
     }
     public Student(String name, String email) {
@@ -46,5 +47,13 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
